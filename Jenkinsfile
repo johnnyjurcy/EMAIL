@@ -1,6 +1,5 @@
-pipeline {
-  agent any
-  stage('email') {
-    echo "hello world"
-}
+node{
+  stage("email"){
+    echo "this testing mail"
+  }
 }
