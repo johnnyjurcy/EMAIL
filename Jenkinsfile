@@ -20,8 +20,10 @@ node{
    // }
     
     try{
-       mail subject: "Veracode scan BUILD_ID: '${env.BUILD_ID}' ", body: "Veracode scan BUILD_ID: '<${env.BUILD_ID}>' completed. You can check scan report at https://analysiscenter.veracode.com/api/4.0/summaryreportpdf.do?build_id=${env.BUILD_ID} ", from: 'gajendra-kt@dxc.com',to: 'gajendra-kt@dxc.com'
-       emailext(subject: "Veracode scan BUILD_ID: '${env.BUILD_ID}' ", body: "Veracode scan BUILD_ID: '<${env.BUILD_ID}>' completed. You can check scan report at https://analysiscenter.veracode.com/api/4.0/summaryreportpdf.do?build_id=${env.BUILD_ID} ",from: 'gajendrarok@gmail.com',to: 'gajendrarok@gmail.com')
+       //mail subject: "Veracode scan BUILD_ID: '${env.BUILD_ID}' ", body: "Veracode scan BUILD_ID: '<${env.BUILD_ID}>' completed. You can check scan report at https://analysiscenter.veracode.com/api/4.0/summaryreportpdf.do?build_id=${env.BUILD_ID} ", from: 'gajendra-kt@dxc.com',to: 'gajendra-kt@dxc.com'
+      emailext body: 'testing email email ext ', subject: 'testing email email ext ', to: 'gajendra-kt@dxc.com', from: 'gajendra-kt@dxc.com'
+ 
+      //emailext(subject: "Veracode scan BUILD_ID: '${env.BUILD_ID}' ", body: "Veracode scan BUILD_ID: '<${env.BUILD_ID}>' completed. You can check scan report at https://analysiscenter.veracode.com/api/4.0/summaryreportpdf.do?build_id=${env.BUILD_ID} ",from: 'gajendrarok@gmail.com',to: 'gajendrarok@gmail.com')
     } catch(Exception e){
       echo "error wjile sending email{$e}"
     }
