@@ -42,7 +42,7 @@ build is : ${env.BUILD_ID}
   <tr><th>Build duration:</th><td>${build.durationString}</td></tr>
 </table>
 <% changeSet = false
-if (changeSet) {
+if (changeSet==true) {
    %> <h5> if ic called </h5>
   <%}%>
 </body>
