@@ -12,4 +12,5 @@ node{
       echo "error wjile sending email{$e}"
     }
   }
+}
   
