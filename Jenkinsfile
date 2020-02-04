@@ -25,14 +25,25 @@ $PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!</h4>
 
 <p>
 from outside
-<script> var x=5;
-dcoument.write('x value is '+x)
-</script>
+build is : ${env.BUILD_ID} 
 </p>
 
 <h3>Veracode scan BUILD_ID: $BUILD_NUMBER  completed.</h3>
 <h3> You can check scan report at : https://analysiscenter.veracode.com/api/4.0/summaryreportpdf.do?build_id=$BUILD_NUMBER </h3>
 </p>
+
+
+<h1>Build ${build.result}</h1>
+<table>
+  <tr><th>Build URL:</th><td><a href="${rooturl}${build.url}">${rooturl}${build.url}</a></td></tr>
+  <tr><th>Project:</th><td>${project.name}</td></tr>
+  <tr><th>Date of build:</th><td>${it.timestampString}</td></tr>
+  <tr><th>Build duration:</th><td>${build.durationString}</td></tr>
+</table>
+<% changeSet = true
+if (changeSet) {
+   %> <h5> if ic called </h5>
+  <%}%>
 </body>
 </html> ''', 
   subject: 'Raffia Veracode Scan report  ',
