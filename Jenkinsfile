@@ -17,11 +17,11 @@ node{
 <body>
 <p>
   <h13>Sean made a change</h3>
-  <h2>Veracode scan BUILD_ID: {$env.BUILD_ID} completed</h2>
-   <h2>Veracode scan BUILD_ID: <{$env.BUILD_ID}> completed</h2>
+  <h2>Veracode scan BUILD_ID: ~$env.BUILD_ID~ completed</h2>
+   <h2>Veracode scan BUILD_ID:% <{$env.BUILD_ID}>% completed</h2>
 </p>
-<${env.BUILD_ID}> env.BUILD_ID 
-<script>env.BUILD_ID</script>
+<% ${env.BUILD_ID} %> %env.BUILD_ID %
+
 </body>
 </html> ''', 
       from: 'gajendra-kt@dxc.com' ,
