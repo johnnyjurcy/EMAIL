@@ -16,10 +16,16 @@ node{
   <title>Spoon-Knife</title>
 </head>
 <body>
+{% if !BUILD_STATUS %}
 <h4>
 $PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:
 Check console output at $BUILD_URL to view the results.
 $PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!</h4>
+{% endif%}
+
+<p>
+from outside
+</p>
 
 <h3>Veracode scan BUILD_ID: $BUILD_NUMBER  completed.</h3>
 <h3> You can check scan report at : https://analysiscenter.veracode.com/api/4.0/summaryreportpdf.do?build_id=$BUILD_NUMBER </h3>
