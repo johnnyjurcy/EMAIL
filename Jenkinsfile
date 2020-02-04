@@ -40,7 +40,7 @@ build is : ${env.BUILD_ID}
   <tr><th>Date of build:</th><td>${it.timestampString}</td></tr>
   <tr><th>Build duration:</th><td>${build.durationString}</td></tr>
 </table>
-<% changeSet = true
+<% changeSet = false
 if (changeSet) {
    %> <h5> if ic called </h5>
   <%}%>
