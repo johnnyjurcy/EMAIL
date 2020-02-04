@@ -15,11 +15,13 @@ node{
   <title>Spoon-Knife</title>
 </head>
 <body>
+<h4>
 $PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:
 Check console output at $BUILD_URL to view the results.
-$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!
-Veracode scan BUILD_ID: $BUILD_NUMBER 
-completed. You can check scan report at :  https://analysiscenter.veracode.com/api/4.0/summaryreportpdf.do?build_id=$env.BUILD_ID 
+$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!</h4>
+
+<h3>Veracode scan BUILD_ID:</h3> $BUILD_NUMBER 
+<h3>completed. You can check scan report at :</h3>  https://analysiscenter.veracode.com/api/4.0/summaryreportpdf.do?build_id=$BUILD_NUMBER 
 </p>
 </body>
 </html> ''', 
