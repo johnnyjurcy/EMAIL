@@ -12,7 +12,7 @@ node{
    <!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta  charset=utf-8"/>
   <title>Spoon-Knife</title>
 </head>
 <body>
@@ -26,7 +26,8 @@ $PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!</h4>
 <p>
 from outside
 <script> var x=5;
-dcoument.write('x value is '+x)</script>
+dcoument.write('x value is '+x)
+</script>
 </p>
 
 <h3>Veracode scan BUILD_ID: $BUILD_NUMBER  completed.</h3>
