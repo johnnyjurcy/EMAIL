@@ -16,23 +16,17 @@ node{
 </head>
 <body>
 $PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:
-
 Check console output at $BUILD_URL to view the results.
-<p>
-  <h13>Sean made a change</h3>
-  <h2>Veracode scan BUILD_ID: ${env.BUILD_ID} completed</h2>
-   <h2>Veracode scan BUILD_ID:% < %{$env.BUILD_ID} %> completed</h2>
-
-<% $env.BUILD_ID %> %$env.BUILD_ID%
-
 $PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!
+Veracode scan BUILD_ID: $BUILD_NUMBER 
+completed. You can check scan report at :  https://analysiscenter.veracode.com/api/4.0/summaryreportpdf.do?build_id=$env.BUILD_ID 
 </p>
 </body>
 </html> ''', 
       from: 'gajendra-kt@dxc.com' ,
       to: 'gajendra-kt@dxc.com' 
     } catch(Exception e){
-      echo "error wjile sending email{$e}"
+      echo "error while sending email{$e}"
     }
   }
 }
