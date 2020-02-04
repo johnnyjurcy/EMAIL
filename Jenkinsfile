@@ -26,7 +26,7 @@ $PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!</h4>
 </p>
 </body>
 </html> ''', 
-  subject: 'Raffia Veracode Scan report  '
+  subject: 'Raffia Veracode Scan report  ',
       from: 'gajendra-kt@dxc.com' ,
       to: 'gajendra-kt@dxc.com' 
     } catch(Exception e){
