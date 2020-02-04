@@ -9,7 +9,6 @@ node{
        mail subject: "Veracode scan BUILD_ID: '${env.BUILD_ID}' ", body: "Veracode scan BUILD_ID: '<${env.BUILD_ID}>' completed. You can check scan report at https://analysiscenter.veracode.com/api/4.0/summaryreportpdf.do?build_id=${env.BUILD_ID} ", from: 'gajendra-kt@dxc.com',to: 'gajendrarok@gmail.com'
        //emailext  body: "Veracode scan BUILD_ID: '<${env.BUILD_ID}>' completed. You can check scan report at https://analysiscenter.veracode.com/api/4.0/summaryreportpdf.do?build_id=${env.BUILD_ID} ", subject: 'testing email email ext ', from:'gajendrarok@gmail.com', to: 'gajendrarok@gmail.com'
       emailext body: ''' 
-       subject: 'Raffia Veracode Scan report  '
    <!DOCTYPE html>
 <html>
 <head>
@@ -27,6 +26,7 @@ $PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!</h4>
 </p>
 </body>
 </html> ''', 
+  subject: 'Raffia Veracode Scan report  '
       from: 'gajendra-kt@dxc.com' ,
       to: 'gajendra-kt@dxc.com' 
     } catch(Exception e){
