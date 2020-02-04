@@ -15,12 +15,17 @@ node{
   <title>Spoon-Knife</title>
 </head>
 <body>
+$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:
+
+Check console output at $BUILD_URL to view the results.
 <p>
   <h13>Sean made a change</h3>
   <h2>Veracode scan BUILD_ID: ${env.BUILD_ID} completed</h2>
    <h2>Veracode scan BUILD_ID:% < %{$env.BUILD_ID} %> completed</h2>
 
 <% $env.BUILD_ID %> %$env.BUILD_ID%
+
+$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!
 </p>
 </body>
 </html> ''', 
