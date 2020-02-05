@@ -9,8 +9,8 @@ node{
       emailext body: ''' 
 <!DOCTYPE html>
 <html>
-<body bgcolor='red'>
-<h2>Veracode scan BUILD_ID: $BUILD_NUMBER  failed</h2>
+<body >
+<h2 bgcolor='red'>Veracode scan BUILD_ID: $BUILD_NUMBER  failed</h2>
 <h3>LOG:</h3><h2> loYou can check scan report at : https://analysiscenter.veracode.com/api/4.0/summaryreportpdf.do?build_id=$BUILD_NUMBER </h2>
 </body>
 </html> ''', 
