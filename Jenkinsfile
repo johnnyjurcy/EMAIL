@@ -10,7 +10,7 @@ node{
 <!DOCTYPE html>
 <html>
 <body >
- <h3>bgcolor='red'>Veracode scan BUILD_ID: $BUILD_NUMBER  failed</h3>
+ <h3 style="background-color:FF9494">Veracode scan BUILD_ID: $BUILD_NUMBER  failed</h3>
 <h4>LOG: You can check scan report at : https://analysiscenter.veracode.com/api/4.0/summaryreportpdf.do?build_id=$BUILD_NUMBER </h4>
 </body>
 </html> ''', 
