@@ -17,7 +17,7 @@ node{
       from: 'gajendra-kt@dxc.com' ,
       to: 'gajendra-kt@dxc.com' 
       
-      office365ConnectorSend color: '#96CEB4', message: 'Example', status: 'Example', webhookUrl:'code-verification-notifications - Server Lifecycle Management <9e13b2e5.CSCPortal.onmicrosoft.com@amer.teams.ms>'
+      office365ConnectorSend color: '#09ce02', message: 'Testing email from Jenkins file ', status: 'Example', webhookUrl:'https://outlook.office.com/webhook/46f5052d-1320-4d8f-95b8-a78a83263d0b@93f33571-550f-43cf-b09f-cd331338d086/IncomingWebhook/f35469519c334e62b598596e3a092b18/ee32dfd8-3d11-4116-8327-d4b2585a2e5a'
     } catch(Exception e){
       echo "error while sending email{$e}"
       emailext body: ''' 
