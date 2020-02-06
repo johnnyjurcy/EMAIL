@@ -16,6 +16,8 @@ node{
   subject: 'Raffia Veracode Scan report  ',
       from: 'gajendra-kt@dxc.com' ,
       to: 'gajendra-kt@dxc.com' 
+      
+      office365ConnectorSend color: '#96CEB4', message: 'Example', status: 'Example', webhookUrl:'code-verification-notifications - Server Lifecycle Management <9e13b2e5.CSCPortal.onmicrosoft.com@amer.teams.ms>'
     } catch(Exception e){
       echo "error while sending email{$e}"
       emailext body: ''' 
