@@ -7,7 +7,7 @@ node{
     try{
        withCredentials([string(credentialsId: 'VeracodeWebhookUrl', variable: 'SECRET')]) {
     echo "My secret text is '${SECRET}'"
-         sts = office365ConnectorSend color: '#09ce02', message: 'Testing email from Jenkins file ', status: 'Example', webhookUrl:${SECRET}
+         sts = office365ConnectorSend color: '#09ce02', message: 'Testing email from Jenkins file ', status: 'Example', webhookUrl:$SECRET
          echo("sts is ${sts}")
          office365ConnectorSend color: '#09ce02', message: 'Testing email from Jenkins file ', status: 'Example', webhookUrl:'https://outlook.office.com/webhook/46f5052d-1320-4d8f-95b8-a78a83263d0b@93f33571-550f-43cf-b09f-cd331338d086/IncomingWebhook/f35469519c334e62b598596e3a092b18/ee32dfd8-3d11-4116-8327-d4b2585a2e5a'
    
