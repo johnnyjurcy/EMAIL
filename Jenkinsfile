@@ -1,6 +1,8 @@
 #!/usr/bin/env groovy
 node{
-  withCredentials([string(credentialsId: 'VeracodeWebhookUrl', variable: 'SECRET')]) {} //set SECRET with the credential content
+  withCredentials([string(credentialsId: 'VeracodeWebhookUrl', variable: 'SECRET')]) {
+    echo "My secret text is '${SECRET}'"
+  } //set SECRET with the credential content
         
   checkout scm
   stage("email"){
