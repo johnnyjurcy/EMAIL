@@ -1,8 +1,8 @@
 #!/usr/bin/env groovy
 node{
-  environment {
-       webhooko   = credentials('VeracodeWebhookUrl')
-    }
+  
+  def webhooko   = credentials('VeracodeWebhookUrl')
+  
   checkout scm
   stage("email"){
     echo "this testing mail"
