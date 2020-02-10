@@ -2,12 +2,16 @@
 node{    
   checkout scm
   stage("email"){
-    def sts;
     echo "this testing mail"
     try{
       // withCredentials([string(credentialsId: 'VeracodeWebhookUrl', variable: 'SECRET')]) {}
     //echo "My secret text is '${SECRET}'"
-      office365ConnectorSend color: '#09ce02',message: " <h1>BUILD_NUMBER  : ${env.BUILD_NUMBER} </1> BUILD_ID  : ${env.BUILD_ID}\n BUILD_DISPLAY_NAME  : ${env.BUILD_DISPLAY_NAME} JOB_NAME  : ${env.JOB_NAME}JOB_BASE_NAME  : ${env.JOB_BASE_NAME}BUILD_TAG  : ${env.BUILD_TAG} EXECUTOR_NUMBER  : ${env.EXECUTOR_NUMBER}NODE_NAME  : ${env.NODE_NAME}NODE_LABELS  : ${env.NODE_LABELS} WORKSPACE  : ${env.WORKSPACE} JENKINS_HOME  : ${env.JENKINS_HOME}JENKINS_URL  : ${env.JENKINS_URL}BUILD_URL  : ${env.BUILD_URL}JOB_URL  : ${env.JOB_URL}", status: 'SUCCESS', webhookUrl:"${env.VeracodeUrl}"
+           office365ConnectorSend color: '#09ce02',message: "
+	  <h1>BUILD_NUMBER  : ${env.BUILD_NUMBER}<br> 
+	  NODE_NAME  : ${env.NODE_NAME}<br>
+	  BUILD_URL  : ${env.BUILD_URL}</h1> 
+	  JOB_URL  : ${env.JOB_URL}", status: 'SUCCESS', webhookUrl:"${env.VeracodeUrl}"
+
          //mail subject: "Veracode scan BUILD_ID: '${env.BUILD_ID}' ", body: "Veracode scan BUILD_ID: '<${env.BUILD_ID}>' completed. You can check scan report at https://analysiscenter.veracode.com/api/4.0/summaryreportpdf.do?build_id=${env.BUILD_ID} ", from: 'gajendra-kt@dxc.com',to: 'gajendrarok@gmail.com'
          //emailext  body: "Veracode scan BUILD_ID: '<${env.BUILD_ID}>' completed. '${env.BUILD_URL}' You can check scan report at https://analysiscenter.veracode.com/api/4.0/summaryreportpdf.do?build_id=${env.BUILD_ID} ", subject: 'testing email email ext ', from:'gajendrarok@gmail.com', to: 'gajendrarok@gmail.com', cc:'${SECRET}'
      
