@@ -23,5 +23,7 @@ emailext body: "<b><h2> Raffia-Veracode Scan completed Succesfully</h2> <h3>Vera
   }
   stage("2nd stage "){
     echo "echo succesfull in stage 2"
+              emailext body: "<h2>Error occurred during veracode upload</h2> <h3>  BUILD_URL:${env.BUILD_URL} <br>ERROR_LOG:</b>${e} </h3>", subject: "Raffia-${env.JOB_NAME} Veacode Scan upload  Failed ", from:'gajendrarok@gmail.com', to: 'gajendrarok@gmail.com'
+
   }
 }
