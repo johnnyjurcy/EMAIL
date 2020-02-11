@@ -6,8 +6,10 @@ node{
   stage("failure "){
     echo "this testing mail"
     try{
-      def a = [0,1];
-       a[3]=6;
+      def a = 10;
+      def b=0;
+       def c;
+      c=a/b;
      
     } catch(Exception e){
       echo "error while sending email{$e}"
