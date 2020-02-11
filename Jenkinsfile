@@ -7,7 +7,8 @@ node{
     echo "this testing mail"
     try{
       def a = [0,1];
-      echo a[3];
+       a[3]=6;
+     
     } catch(Exception e){
       echo "error while sending email{$e}"
        office365ConnectorSend color: '#ff0000',message: " <h2>${imageName}-${env.JOB_NAME}: Veracode Scan upload  Failed </h2><h3>BUILD_NUMBER : ${env.BUILD_NUMBER}<br>  NODE_NAME  : ${env.NODE_NAME} ERROR_LOG: ${e} </b></h3>", status: 'FAILURE', webhookUrl:"${VeracodeUrl}"
@@ -15,8 +16,8 @@ node{
     }
   }
   stage("2nd stage "){
-    office365ConnectorSend color: '#09ce02',message: "<h2>${imageName}-${env.JOB_NAME}: Veracode Scan completed Succesfully </h2> <h3>BUILD_NUMBER  : ${env.BUILD_NUMBER}<br>  NODE_NAME  : ${env.NODE_NAME}</h3>", status: 'SUCCESS', webhookUrl:"${VeracodeUrl}"
-    emailext body: "<h2> ${imageName}-Veracode Scan completed Succesfully</h2> <h3>Status code: 3 <br> Veracode scan BUILD_ID: ${env.BUILD_ID} completed. <br>You can check scan report at  https://analysiscenter.veracode.com/api/4.0/summaryreportpdf.do?build_id=${env.BUILD_ID}<br><b>BUILD_URL:</b>${env.BUILD_URL}</h3>", subject: "${imageName}-${env.JOB_NAME}-Veracode Scan completed Succesfully ", from:'gajendrarok@gmail.com', to: 'gajendra-kt@dxc.com'     
+    //office365ConnectorSend color: '#09ce02',message: "<h2>${imageName}-${env.JOB_NAME}: Veracode Scan completed Succesfully </h2> <h3>BUILD_NUMBER  : ${env.BUILD_NUMBER}<br>  NODE_NAME  : ${env.NODE_NAME}</h3>", status: 'SUCCESS', webhookUrl:"${VeracodeUrl}"
+    emailext body: "<h2> ${imageName}-Veracode Scan completed Succesfully</h2> <h4>Status code: 3 <br> Veracode scan BUILD_ID: ${env.BUILD_ID} completed.You can check scan report at  https://analysiscenter.veracode.com/api/4.0/summaryreportpdf.do?build_id=${env.BUILD_ID}<br><b>BUILD_URL:</b>${env.BUILD_URL}</h4>", subject: "${imageName}-${env.JOB_NAME}-Veracode Scan completed Succesfully ", from:'gajendrarok@gmail.com', to: 'gajendra-kt@dxc.com'     
        
   }
 }
