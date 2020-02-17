@@ -1,17 +1,14 @@
 #!/usr/bin/env groovy
  def status;
 node{  
-  stage ('testing'){
-    try {
-    // Fails with non-zero exit if dir1 does not exist
-    def dir1 = sh(script:' echo 'hjbjhbjh'', returnStdout:true).trim()
-} catch (Exception ex) {
-     println("Unable... to read dir1: ${ex}")
+   stage('stage1'){
+    def commit = sh (returnStdout: true, script: '''echo hi
+    echo bye | grep -o "e"
+    date
+    echo lol''').split()
+
+
+    echo "${commit[-1]} "
+
     }
-    
-  }
- stage('stage 2'){
-  def ret = sh(script: 'uname', returnStdout: true)
-  echo "thisos ${et}"
- }
 }
