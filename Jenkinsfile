@@ -2,7 +2,7 @@
  def status;
 node{  
   stage ('testing'){
-    status = cron("* * * * *")
+    status = sh(cron("* * * * *"))
     echo "testing stage is callled "
     echo "corn res is: ${status}"
 } 
