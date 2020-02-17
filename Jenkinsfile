@@ -5,7 +5,7 @@ node{
     def commit = sh (returnStdout: true, script: '''echo hiecho lol''')
 
 
-    echo "${commit} "
+    echo "commint :${commit[-1]} "
 
     }
-}
+
