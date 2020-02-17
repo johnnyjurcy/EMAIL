@@ -2,13 +2,10 @@
  def status;
 node{  
    stage('stage1'){
-    def commit = sh (returnStdout: true, script: '''echo hi
-    echo bye | grep -o "e"
-    date
-    echo lol''').split()
+    def commit = sh (returnStatus : true ,  script: '''echo hi ''').split()
 
 
-    echo "${commit[-1]} "
+    echo "${commit} "
 
     }
 }
