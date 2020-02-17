@@ -2,8 +2,13 @@
  def status;
 node{  
    stage('stage1'){
-   returnResult = sh(returnStatus: true, script: 'cron()')
-    echo "stage 1 called: ${ returnResult} "
+    def commit = sh (returnStdout: true, script: '''echo hi
+    echo bye | grep -o "e"
+    date
+    echo lol''').split()
+
+
+    echo "${commit[-1]} "
 
     }
 }
