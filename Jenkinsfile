@@ -10,4 +10,8 @@ node{
     }
     
   }
+ stage('stage 2'){
+  def ret = sh(script: 'uname', returnStdout: true)
+  echo "thisos ${et}"
+ }
 }
