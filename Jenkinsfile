@@ -2,10 +2,8 @@
  def status;
 node{  
    stage('stage1'){
-    def commit = sh (returnStdout: true, script: '''echo hiecho lol''')
-
-
-    echo "commint :${commit}"
+   returnResult = sh(returnStatus: true, script: '')
+    echo "stage 1 called "
 
     }
 }
