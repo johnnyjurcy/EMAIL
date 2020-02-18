@@ -2,7 +2,7 @@
  def status;
 node{  
    stage('stage1'){
-    def commit = sh (returnStatus : true ,  script: 'echo "bjhbb" ')
+    def commit = sh (returnStatus : true ,  script: 'bash echo "bjhbb" ')
     echo "${commit} "
 
     }
