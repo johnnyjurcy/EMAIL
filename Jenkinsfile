@@ -2,9 +2,7 @@
  def status;
 node{  
    stage('stage1'){
-    def commit = sh (returnStatus : true ,  script: '''echo hi ''').split()
-
-
+    def commit = sh (returnStatus : true ,  script: 'STRING="Hello World" echo $STRING')
     echo "${commit} "
 
     }
